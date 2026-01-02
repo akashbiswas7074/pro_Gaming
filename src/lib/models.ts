@@ -49,13 +49,8 @@ const UserSchema = new Schema<IUser>({
     isActive: { type: Boolean, default: true }
 }, { timestamps: true });
 
-// Auto set expiry for free accounts (10 days)
-UserSchema.pre('save', function (next) {
-    if (this.isNew && this.status === 'free') {
-        this.expiresAt = new Date(Date.now() + 10 * 24 * 60 * 60 * 1000);
-    }
-    next();
-});
+// Note: expiry is set to 10 days after registration for free accounts
+// This is handled in the API route when creating users
 
 // ===== BALANCE MODEL =====
 export interface IBalance extends Document {
