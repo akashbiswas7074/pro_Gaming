@@ -11,7 +11,7 @@
   "dependencies": {
     "@auth/core": "^0.41.0",
     "@types/mongoose": "^5.11.96",
-    "ethers": "^5.7.2",
+    "ethers": "^5.8.0",
     "framer-motion": "^12.23.26",
     "lucide-react": "^0.562.0",
     "mongoose": "^9.1.1",
